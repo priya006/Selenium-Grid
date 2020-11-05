@@ -4,7 +4,7 @@ Selenium-Grid is used to run parallel executions in multiple machines at the sam
 Run the Test in the Hub and the actual execution takes place in node machine 
 
 ### Architecture Diagram
-
+![Selenium_Grid](https://github.com/priya006/Selenium-Grid/blob/master/Selenium_Grid.png)
 
 ### How to Run Selenium Grid Test in Mac Node using Firefox browser
 1. Download Selenium Server [Grid](https://www.selenium.dev/downloads/) 
