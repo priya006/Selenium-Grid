@@ -1,5 +1,7 @@
-# Selenium-Grid
-Run the Test in the Hub and the actual execution takes place in node 
+# Selenium-Grid 
+-------------------
+Selenium-Grid is used to run parallel executions in multiple machines at the same time.
+Run the Test in the Hub and the actual execution takes place in node machine 
 
 ### Architecture Diagram
 
