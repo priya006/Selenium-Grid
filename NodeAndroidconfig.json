@@ -1,0 +1,26 @@
+{
+  "capabilities":
+  [
+    {
+      "deviceName": "OnePlus 6T",
+      "browserName": "chrome",
+      "version":"10.3.6",
+      "maxInstances": 2,
+      "platform":"Android"
+    }
+  ],
+  "configuration":
+  {
+    "cleanUpCycle":3000,
+    "timeout":30000,
+    "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+    "url":"http://10.227.181.119:4625/wd/hub",
+    "host": "10.227.181.119",
+    "port": 4625,
+    "maxSession": 2,
+    "register": true,
+    "registerCycle": 5000,
+    "hubPort": 4444,
+    "hubHost": "10.227.181.119"
+  }
+}

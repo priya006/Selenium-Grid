@@ -18,6 +18,8 @@ public class SeleniumGrid {
         DesiredCapabilities capability = DesiredCapabilities.chrome();
         capability.setBrowserName("firefox");
         capability.setPlatform(Platform.MAC);
+        capability.setPlatform(Platform.ANDROID);
+        capability.setBrowserName("chrome");
         driver = new RemoteWebDriver(new URL(nodeURL), capability);
     }
 
