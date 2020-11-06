@@ -57,3 +57,5 @@ so that node registers to the hub
 `
 
 
+## Troubleshooting Tips
+1. If there is issue while registering the node to the hub. Start the Selinium server/hub and navigate to http://localhost:4444/wd/hub from teh browser to see the full stack trace

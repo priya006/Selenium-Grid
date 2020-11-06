@@ -5,22 +5,25 @@ import java.net.URL;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import sun.misc.Version;
 
 public class SeleniumGrid {
 
     WebDriver driver;
-    String baseURL, nodeURL;
+    String baseURL, hubURL;
 
     @BeforeTest
     public void setUp() throws MalformedURLException {
         baseURL = "http://demo.guru99.com/test/guru99home/";
-        nodeURL = "http://192.168.0.163:4444/wd/hub";
-        DesiredCapabilities capability = DesiredCapabilities.chrome();
-        capability.setBrowserName("firefox");
-        capability.setPlatform(Platform.MAC);
+        hubURL = "http://10.227.181.119:4444/wd/hub";
+        DesiredCapabilities capability = new DesiredCapabilities();
+        //capability.setBrowserName("firefox");
+        //capability.setPlatform(Platform.MAC);
         capability.setPlatform(Platform.ANDROID);
+        capability.setCapability("platformName", "Android");
+        capability.setVersion("86.0.4240.110");
         capability.setBrowserName("chrome");
-        driver = new RemoteWebDriver(new URL(nodeURL), capability);
+        driver = new RemoteWebDriver(new URL(hubURL), capability);
     }
 
     @AfterTest
