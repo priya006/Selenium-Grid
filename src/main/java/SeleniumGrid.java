@@ -21,7 +21,10 @@ public class SeleniumGrid {
         //capability.setPlatform(Platform.MAC);
         capability.setPlatform(Platform.ANDROID);
         capability.setCapability("platformName", "Android");
-        capability.setVersion("86.0.4240.110");
+        //real Device Version
+       // capability.setVersion("86.0.4240.110");
+        //Emulator version
+        capability.setVersion("83.0.4103.106");
         capability.setBrowserName("chrome");
         driver = new RemoteWebDriver(new URL(hubURL), capability);
     }
