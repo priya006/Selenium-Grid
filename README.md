@@ -7,7 +7,6 @@ Run the Test in the Hub and the actual execution takes place in node machine
 ![Selenium_Grid](https://github.com/priya006/Selenium-Grid/blob/master/Selenium_Grid.png)
 
 
-
 ### How to Run Selenium Grid Test in Mac Node using Firefox browser
 1. Download Selenium Server [Grid](https://www.selenium.dev/downloads/) 
 2. From the hub(Main Machine where the test is run) CD to where the jar is downloaded and 
