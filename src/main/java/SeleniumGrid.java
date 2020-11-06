@@ -15,16 +15,16 @@ public class SeleniumGrid {
     @BeforeTest
     public void setUp() throws MalformedURLException {
         baseURL = "http://demo.guru99.com/test/guru99home/";
-        hubURL = "http://10.227.181.119:4444/wd/hub";
+        hubURL = "http://localhost:4444/wd/hub";
         DesiredCapabilities capability = new DesiredCapabilities();
         //capability.setBrowserName("firefox");
         //capability.setPlatform(Platform.MAC);
         capability.setPlatform(Platform.ANDROID);
         capability.setCapability("platformName", "Android");
         //real Device Version
-       // capability.setVersion("86.0.4240.110");
+        capability.setVersion("86.0.4240.110");
         //Emulator version
-        capability.setVersion("83.0.4103.106");
+       // capability.setVersion("83.0.4103.106");
         capability.setBrowserName("chrome");
         driver = new RemoteWebDriver(new URL(hubURL), capability);
     }
