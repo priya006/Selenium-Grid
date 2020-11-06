@@ -22,7 +22,7 @@ public class SeleniumGrid {
         capability.setPlatform(Platform.ANDROID);
         capability.setCapability("platformName", "Android");
         //real Device Version
-        capability.setVersion("86.0.4240.110");
+        capability.setVersion("86.0.4240.185");
         //Emulator version
        // capability.setVersion("83.0.4103.106");
         capability.setBrowserName("chrome");
