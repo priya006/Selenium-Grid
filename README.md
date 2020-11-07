@@ -66,6 +66,8 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
 5. Start  the Appium Sever with Emultor node attached. Example: `appium --chromedriver-executable  /Users/pboopathi/Downloads/chromedriver2 -p 4999 --nodeconfig  Android_Emultor_Node.json`
 6. RUn the test and watch the test running in Emulator :) 
 
+### Parallel Execution
+
 ## Troubleshooting Tips
 1. If there is issue while registering the node to the hub. Start the Selinium server/hub and navigate to http://localhost:4444/wd/hub from teh browser to see the full stack trace
 2. It is important to set JAVA_HOME. [Guide to set Java home](https://medium.com/@spmadhi/easy-steps-to-install-and-set-java-home-in-mac-machine-c84b7bbc94e6)
