@@ -61,7 +61,7 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
 ## Troubleshooting Tips
 1. If there is issue while registering the node to the hub. Start the Selinium server/hub and navigate to http://localhost:4444/wd/hub from teh browser to see the full stack trace
 2. It is important to set JAVA_HOME. [Guide to set Java home](https://medium.com/@spmadhi/easy-steps-to-install-and-set-java-home-in-mac-machine-c84b7bbc94e6)
-3. It is important to understand Chromedriver/Chrome compatibility. List of Chromedriver versions and their matching minimum Chrome versions could be found [here](https://raw.githubusercontent.com/appium/appium-chromedriver/master/config/mapping.json)
+3. It is important to understand **Chromedriver/Chrome compatibility**. List of Chromedriver versions and their matching minimum Chrome versions could be found [here](https://raw.githubusercontent.com/appium/appium-chromedriver/master/config/mapping.json)
 4. After connecting the Real Android device to laptop using wire. Run the command `adb devices` to check if the device  is listed
 
 **References**
