@@ -61,9 +61,9 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
 ### How to configure Selenium grid with Android Emultor as a Node using Appium
 1. Start the Selenium Stand alone server in a `Machine A`. This machine act as a hub. Command `java -jar selenium-server-standalone-3.141.59.jar -role hub`
 2. Create a Configuration json file. Example: `Android_Emultor_Node.json`
-3. Start the emultor and Run the command `adb devices`. Make sure to see emulator-5554	device is attached
+3. Start the emulator and Run the command `adb devices`. Make sure to see emulator-5554	device is attached
 4. Check the version of chrome in the emulator and download the compatible chromedriver.
-5. Start  the Appium Sever with Emultor node attached. Example: `appium --chromedriver-executable  /Users/pboopathi/Downloads/chromedriver2 -p 4999 --nodeconfig  Android_Emultor_Node.json`
+5. Start  the Appium Sever with Emulator node attached. Example: `appium --chromedriver-executable  /Users/pboopathi/Downloads/chromedriver2 -p 4999 --nodeconfig  Android_Emultor_Node.json`
 6. RUn the test and watch the test running in Emulator :) 
 
 ### Parallel Execution
