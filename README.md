@@ -53,10 +53,11 @@ so that node registers to the hub
   }
 }
 ```
-3. In the Node machine (Say: Machine B)run the command ` appium -p 4725 --nodeconfig  <pathwheretheconfigurationjsonis>
+3. In the Node machine (Say: Machine B)run the command ` appium --chromedriver-executable  <pathwherechromedriverisinstalled> -p 4725 --nodeconfig  <pathwheretheconfigurationjsonis>
+The Json file `NodeAndroidconfig.json` has localhost for hubhost since the Android real device was connected to a laptop where the Selenium Stand alone server was running
 `
-
 
 ## Troubleshooting Tips
 1. If there is issue while registering the node to the hub. Start the Selinium server/hub and navigate to http://localhost:4444/wd/hub from teh browser to see the full stack trace
 2. It is important to set JAVA_HOME. [Guide to set Java home](https://medium.com/@spmadhi/easy-steps-to-install-and-set-java-home-in-mac-machine-c84b7bbc94e6)
+3. It is important to understand Chromedriver/Chrome compatibility. List of Chromedriver versions and their matching minimum Chrome versions could be found [here](https://raw.githubusercontent.com/appium/appium-chromedriver/master/config/mapping.json)
