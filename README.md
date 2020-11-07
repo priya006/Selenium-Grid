@@ -17,7 +17,7 @@ type the command `java -jar selenium-server-standalone-3.141.59.jar -role hub`
 so that node registers to the hub
 6. From the hub/browser check http://localhost:4444/grid/console to see listening status
 
-###Installation
+### Installation
 1. `npm install -g appium` if you already have `npm` and `node js`
    Install `npm install -g appium-doctor ` and run the command `appium-doctor`
    
@@ -64,5 +64,6 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
 3. It is important to understand Chromedriver/Chrome compatibility. List of Chromedriver versions and their matching minimum Chrome versions could be found [here](https://raw.githubusercontent.com/appium/appium-chromedriver/master/config/mapping.json)
 4. After connecting the Real Android device to laptop using wire. Run the command `adb devices` to check if the device  is listed
 
-References
+**References**
+----------------
 1. [appium-chromedriver](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md)
