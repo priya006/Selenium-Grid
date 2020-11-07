@@ -23,7 +23,7 @@ so that node registers to the hub
    
 ### How to configure Selenium grid with Android real Device as a Node using Appium
 1. Start the Selenium Stand alone server in a `Machine A`. This machine act as a hub. Command `java -jar selenium-server-standalone-3.141.59.jar -role hub`
-2. Create a Configuration json file. Example: `NodeAndroidconfig.json`
+2. Create a Configuration json file. Example: `Real_Device_Android_Node.json`
  
  **Selenium Grid Node Configuration Json File Template:**
 ```
@@ -55,7 +55,7 @@ so that node registers to the hub
 }
 ```
 3. In the Node machine (Say: Machine B) run the command ` appium --chromedriver-executable  <pathwherechromedriverisinstalled> -p 4725 --nodeconfig  <pathwheretheconfigurationjsonis>`
-The Json file `NodeAndroidconfig.json` has **localhost** for hub host key since the Android real device was connected to a laptop where the Selenium Stand alone server was running
+The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key since the Android real device was connected to a laptop where the Selenium Stand alone server was running
 4.Finally, run the Selenium test from the class `SeleniumGrid`
 
 ## Troubleshooting Tips
