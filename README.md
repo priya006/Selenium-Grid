@@ -53,9 +53,9 @@ so that node registers to the hub
   }
 }
 ```
-3. In the Node machine (Say: Machine B)run the command ` appium --chromedriver-executable  <pathwherechromedriverisinstalled> -p 4725 --nodeconfig  <pathwheretheconfigurationjsonis>
-The Json file `NodeAndroidconfig.json` has localhost for hubhost since the Android real device was connected to a laptop where the Selenium Stand alone server was running
-`
+3. In the Node machine (Say: Machine B)run the command ` appium --chromedriver-executable  <pathwherechromedriverisinstalled> -p 4725 --nodeconfig  <pathwheretheconfigurationjsonis>`
+The Json file `NodeAndroidconfig.json` has **localhost** for hubhost key since the Android real device was connected to a laptop where the Selenium Stand alone server was running
+4.Finally run the Selenium test from the class `SeleniumGrid`
 
 ## Troubleshooting Tips
 1. If there is issue while registering the node to the hub. Start the Selinium server/hub and navigate to http://localhost:4444/wd/hub from teh browser to see the full stack trace
