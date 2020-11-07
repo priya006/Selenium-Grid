@@ -1,0 +1,26 @@
+{
+  "capabilities":
+  [
+    {
+      "deviceName":"Pixel_API_27",
+      "browserName": "chrome",
+      "version":"83.0.4103.106",
+      "platformVersion":"8.1.0",
+      "maxInstances": 2,
+      "platform":"Android"
+    }
+  ],
+  "configuration":
+  {
+    "cleanUpCycle":3000,
+    "timeout":30000,
+    "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+    "maxSession": 2,
+    "register": true,
+    "registerCycle": 5000,
+    "hubPort": 4444,
+    "hubHost": "127.0.0.1",
+    "hubProtocol": "http"
+
+  }
+}
