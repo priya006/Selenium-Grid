@@ -32,7 +32,7 @@ public class SeleniumGrid {
 
         //Node C
         //Emulator version
-        //capability.setVersion("83.0.4103.106");
+        capability.setVersion("83.0.4103.106");
 
         //Start the driver
         driver = new RemoteWebDriver(new URL(hubURL), capability);

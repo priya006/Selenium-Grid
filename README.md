@@ -58,12 +58,22 @@ so that node registers to the hub
 The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key since the Android real device was connected to a laptop where the Selenium Stand alone server was running
 4.Finally, run the Selenium test from the class `SeleniumGrid`
 
+### How to configure Selenium grid with Android Emultor as a Node using Appium
+1. Start the Selenium Stand alone server in a `Machine A`. This machine act as a hub. Command `java -jar selenium-server-standalone-3.141.59.jar -role hub`
+2. Create a Configuration json file. Example: `Android_Emultor_Node.json`
+3. Start the emultor and Run the command `adb devices`. Make sure to see emulator-5554	device is attached
+4. Check the version of chrome in the emulator and download the compatible chromedriver.
+5. Start  the Appium Sever with Emultor node attached. Example: `appium --chromedriver-executable  /Users/pboopathi/Downloads/chromedriver2 -p 4999 --nodeconfig  Android_Emultor_Node.json`
+6. RUn the test and watch the test running in Emulator :) 
+
 ## Troubleshooting Tips
 1. If there is issue while registering the node to the hub. Start the Selinium server/hub and navigate to http://localhost:4444/wd/hub from teh browser to see the full stack trace
 2. It is important to set JAVA_HOME. [Guide to set Java home](https://medium.com/@spmadhi/easy-steps-to-install-and-set-java-home-in-mac-machine-c84b7bbc94e6)
 3. It is important to understand **Chromedriver/Chrome compatibility**. List of Chromedriver versions and their matching minimum Chrome versions could be found [here](https://raw.githubusercontent.com/appium/appium-chromedriver/master/config/mapping.json)
 4. After connecting the Real Android device to laptop using wire. Run the command `adb devices` to check if the device  is listed
+5. Turn on `USB debugging` in Real device. System > Developer options > Debugging >  USB debugging
 
 **References**
 ----------------
 1. [appium-chromedriver](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md)
+2. [Download ChromeDriver](https://chromedriver.chromium.org/downloads)
