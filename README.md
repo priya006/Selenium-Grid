@@ -20,6 +20,7 @@ so that node registers to the hub
 ### Installation
 1. `npm install -g appium` if you already have `npm` and `node js`
    Install `npm install -g appium-doctor ` and run the command `appium-doctor`
+2. Run the command ` brew install carthage`   
    
 ### How to configure Selenium grid with Android real Device as a Node using Appium
 1. Start the Selenium Stand alone server in a `Machine A`. This machine act as a hub. Command `java -jar selenium-server-standalone-3.141.59.jar -role hub`
@@ -80,6 +81,7 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
 This could be helpful to find the version of browser you are using from Ipad
 2.Run the command `instruments -s devices` to get the list of IOS devices associated to your laptop
 3.IOS Real Device or Simulator turn on the  `Allow Remote Automation`option. Navigate to `settings > safari > advanced`
+4. Run the command `appium-doctor` and make sure you see green tick for all the checks. 
  
 
 **References**
