@@ -40,7 +40,11 @@ public class SeleniumGrid {
         capability.setBrowserName("safari");
         capability.setCapability("platformName", "Ios");
         capability.setVersion("9");
-        capability.setCapability("AutomationName" , "XCUITest");
+        capability.setCapability("deviceName", "Ipad16gb");
+        capability.setCapability("automationName" , "XCUITest");
+        capability.setCapability("udid", "73d7a51d-ae3d-4248-afd7-56c823e58d11");
+
+
 
 
 

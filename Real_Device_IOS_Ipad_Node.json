@@ -7,7 +7,8 @@
       "version":"9",
       "platformVersion":"9.3.5",
       "maxInstances": 2,
-      "platform":"ios"
+      "platformName": "iOS",
+      "automationName": "XCUITest"
     }
   ],
   "configuration":
