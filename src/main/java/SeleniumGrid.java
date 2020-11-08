@@ -40,6 +40,8 @@ public class SeleniumGrid {
         capability.setBrowserName("safari");
         capability.setCapability("platformName", "Ios");
         capability.setVersion("9");
+        capability.setCapability("AutomationName" , "XCUITest");
+
 
 
         //Start the driver
