@@ -36,20 +36,24 @@ public class SeleniumGrid {
 
         //Node D
         //Real Device IOS Ipad16GB
-        capability.setPlatform(Platform.IOS);
-        capability.setBrowserName("safari");
-        capability.setCapability("platformName", "Ios");
-        capability.setVersion("9");
-        capability.setCapability("deviceName", "Ipad16gb");
-        capability.setCapability("automationName" , "XCUITest");
-        capability.setCapability("udid", "aab81c2d-22e9-4d8c-8e6f-b3a7f45090fa");
+//        capability.setPlatform(Platform.IOS);
+//        capability.setBrowserName("safari");
+//        capability.setCapability("platformName", "Ios");
+//        capability.setVersion("9");
+//        capability.setCapability("deviceName", "Ipad16gb");
+//        capability.setCapability("automationName" , "XCUITest");
+//        capability.setCapability("udid", "aab81c2d-22e9-4d8c-8e6f-b3a7f45090fa");
 
 
 
         //Node E
         //Simulator
+        capability.setPlatform(Platform.IOS);
+        capability.setBrowserName("safari");
+        capability.setCapability("platformName", "Ios");
         capability.setVersion("13.1");
         capability.setCapability("deviceName", "iPhone 11 (13.6)");
+        capability.setCapability("ios","971651FD-BFBC-41DF-B67A-C13BB11844D4");
 
         //Start the driver
         driver = new RemoteWebDriver(new URL(hubURL), capability);
