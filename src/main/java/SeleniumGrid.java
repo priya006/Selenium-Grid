@@ -42,11 +42,14 @@ public class SeleniumGrid {
         capability.setVersion("9");
         capability.setCapability("deviceName", "Ipad16gb");
         capability.setCapability("automationName" , "XCUITest");
-        capability.setCapability("udid", "73d7a51d-ae3d-4248-afd7-56c823e58d11");
+        capability.setCapability("udid", "aab81c2d-22e9-4d8c-8e6f-b3a7f45090fa");
 
 
 
-
+        //Node E
+        //Simulator
+        capability.setVersion("13.1");
+        capability.setCapability("deviceName", "iPhone 11 (13.6)");
 
         //Start the driver
         driver = new RemoteWebDriver(new URL(hubURL), capability);
