@@ -36,7 +36,7 @@ public class SeleniumGrid {
 
         //Node D
         //Real Device IOS Ipad16GB
-        capability.setVersion("13.1");
+        capability.setVersion("9");
 
 
         //Start the driver
