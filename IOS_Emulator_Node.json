@@ -2,7 +2,7 @@
   "capabilities":
   [
     {
-      "deviceName":"iPhone 11 (13.6)",
+      "deviceName":"iPhone",
       "browserName": "safari",
       "version":"13.1",
       "platformVersion":"13.6",
