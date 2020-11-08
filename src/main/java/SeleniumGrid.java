@@ -34,6 +34,11 @@ public class SeleniumGrid {
         //Emulator version
         capability.setVersion("83.0.4103.106");
 
+        //Node D
+        //Real Device IOS Ipad16GB
+        capability.setVersion("13.1");
+
+
         //Start the driver
         driver = new RemoteWebDriver(new URL(hubURL), capability);
     }

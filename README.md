@@ -75,6 +75,10 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
 4. After connecting the Real Android device to laptop using wire. Run the command `adb devices` to check if the device  is listed
 5. Turn on `USB debugging` in Real device. System > Developer options > Debugging >  USB debugging
 
+## Tips
+1. How to find the version of browser. Type https://www.whatismybrowser.com/
+This could be helpful to find the version of browser you are using from Ipad 
+
 **References**
 ----------------
 1. [appium-chromedriver](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md)
