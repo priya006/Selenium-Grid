@@ -6,6 +6,9 @@ Run the Test in the Hub and the actual execution takes place in node machine
 ### Architecture Diagram
 ![Selenium_Grid](https://github.com/priya006/Selenium-Grid/blob/master/Selenium_Grid.png)
 
+### Assumptions
+1. Android Studio is set up with emulators created 
+2. Xcode Set up and simulators are created
 
 ### How to Run Selenium Grid Test in Mac Node using Firefox browser
 1. Download Selenium Server [Grid](https://www.selenium.dev/downloads/) 
