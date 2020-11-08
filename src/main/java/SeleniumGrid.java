@@ -36,6 +36,9 @@ public class SeleniumGrid {
 
         //Node D
         //Real Device IOS Ipad16GB
+        capability.setPlatform(Platform.IOS);
+        capability.setBrowserName("safari");
+        capability.setCapability("platformName", "Ios");
         capability.setVersion("9");
 
 
