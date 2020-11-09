@@ -15,7 +15,7 @@ public class SeleniumGrid {
     public void setUp() throws MalformedURLException {
 
         baseURL = "https://www.google.com/";
-        hubURL = "http://localhost:4444/wd/hub";
+        hubURL = "http://10.226.15.96:4444/wd/hub";
         DesiredCapabilities capability = new DesiredCapabilities();
 
         //Node A
