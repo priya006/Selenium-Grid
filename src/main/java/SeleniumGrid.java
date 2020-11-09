@@ -19,11 +19,13 @@ public class SeleniumGrid {
         DesiredCapabilities capability = new DesiredCapabilities();
 
         //Node A
-        capability.setPlatform(Platform.MAC);
-        capability.setBrowserName("firefox");
+        //Mac As Node
+//        capability.setPlatform(Platform.MAC);
+//        capability.setBrowserName("firefox");
 
 
         //Node B
+        //Android Real Device
         capability.setPlatform(Platform.ANDROID);
         capability.setBrowserName("chrome");
         capability.setCapability("platformName", "Android");
@@ -32,7 +34,7 @@ public class SeleniumGrid {
 
         //Node C
         //Emulator version
-        capability.setVersion("83.0.4103.106");
+//        capability.setVersion("83.0.4103.106");
 
         //Node D
         //Real Device IOS Ipad16GB
