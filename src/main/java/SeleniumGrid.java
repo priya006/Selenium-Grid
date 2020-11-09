@@ -14,7 +14,7 @@ public class SeleniumGrid {
     @BeforeTest
     public void setUp() throws MalformedURLException {
 
-        baseURL = "http://demo.guru99.com/test/guru99home/";
+        baseURL = "https://www.google.com/";
         hubURL = "http://localhost:4444/wd/hub";
         DesiredCapabilities capability = new DesiredCapabilities();
 
@@ -67,12 +67,12 @@ public class SeleniumGrid {
     @Test
     public void sampleTest() {
         driver.get(baseURL);
+        System.out.println("Site is launched");
 
-
-        if (driver.getPageSource().contains("MOBILE TESTING")) {
-            Assert.assertTrue(true, "Mobile Testing Link Found");
+        if (driver.getPageSource().contains("Google Search")) {
+           Assert.assertTrue(true, "Google Search Found");
         } else {
-            Assert.assertTrue(false, "Failed: Link not found");
+            Assert.assertTrue(false, "Failed: Google Search NOT found");
         }
 
     }

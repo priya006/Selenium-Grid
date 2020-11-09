@@ -1,7 +1,9 @@
 # Selenium-Grid 
 -------------------
 Selenium-Grid is used to run parallel executions in multiple machines at the same time.
-Run the Test in the Hub and the actual execution takes place in node machine 
+Run the Test in the Hub and the actual execution takes place in node machine
+
+## Environment 
 
 ### Architecture Diagram
 ![Selenium_Grid](https://github.com/priya006/Selenium-Grid/blob/master/Selenium_Grid.png)
@@ -62,7 +64,7 @@ so that node registers to the hub
 The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key since the Android real device was connected to a laptop where the Selenium Stand alone server was running
 4.Finally, run the Selenium test from the class `SeleniumGrid`
 
-### How to configure Selenium grid with Android Emultor as a Node using Appium
+### How to configure Selenium grid with Android Emulator as a Node using Appium
 1. Start the Selenium Stand alone server in a `Machine A`. This machine act as a hub. Command `java -jar selenium-server-standalone-3.141.59.jar -role hub`
 2. Create a Configuration json file. Example: `Android_Emultor_Node.json`
 3. Start the emulator and Run the command `adb devices`. Make sure to see emulator-5554	device is attached
