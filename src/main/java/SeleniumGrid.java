@@ -68,15 +68,21 @@ public class SeleniumGrid {
 
 
         //Node E
-        //Simulator
-        capability.setPlatform(Platform.IOS);
-        capability.setBrowserName("safari");
-        capability.setCapability("platformName", "Ios");
-        capability.setVersion("13.1");
-        capability.setCapability("deviceName", "iPhone");
-        capability.setCapability("udid","971651FD-BFBC-41DF-B67A-C13BB11844D4");
-        capability.setCapability("automationName" , "XCUITest");
+        //IOS Simulator
+        else
+            if(portNO.equalsIgnoreCase("5777")) {
+                capability.setPlatform(Platform.IOS);
+                capability.setBrowserName("safari");
+                capability.setCapability("platformName", "Ios");
+                capability.setVersion("13.1");
+                capability.setCapability("deviceName", "iPhone");
+                capability.setCapability("udid", "971651FD-BFBC-41DF-B67A-C13BB11844D4");
+                capability.setCapability("automationName", "XCUITest");
+                driver = new RemoteWebDriver(new URL(hubURL), capability);
+            }
 
+            else
+                System.err.println("Provide correct port no");
 
     }
 
@@ -86,7 +92,7 @@ public class SeleniumGrid {
     }
     @Test
     public void sampleTest() {
-        driver.get(baseURL);
+        driver.get(appURL);
         System.out.println("Site is launched");
 
         if (driver.getPageSource().contains("Google Search")) {
