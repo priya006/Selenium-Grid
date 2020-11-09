@@ -70,10 +70,17 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
 3. Start the emulator and Run the command `adb devices`. Make sure to see emulator-5554	device is attached
 4. Check the version of chrome in the emulator and download the compatible chromedriver.
 5. Start  the Appium Sever with Emulator node attached. Example: `appium --chromedriver-executable  /Users/pboopathi/Downloads/chromedriver2 -p 4999 --nodeconfig  Android_Emultor_Node.json`
-6. RUn the test and watch the test running in Emulator :) 
+6. Run the test and watch the test running in Emulator :) 
 
 ### How to configure Selenium grid with IOS Simulator as a Node using Appium
 ![Selenium_Grid](https://github.com/priya006/Selenium-Grid/blob/master/Selenium_Grid_Server_Client.png)
+
+1. Start the Selenium Stand alone server in a `Machine A`. This machine act as a hub. Command `java -jar selenium-server-standalone-3.141.59.jar -role hub`
+2.  Create a Configuration json file. Example: `IOS_Emulator_Node.json`
+3. Start the Simulator and Run the command `instruments -s devices` to make sure to see simulators attached to the laptop
+4. No need to Install SafariDriver if the Safari Browser version is 10 and above.
+5. Start  the Appium Sever with Simulator node attached. Example: `appium  -p 5777  --nodeconfig  IOS_Emulator_Node.json`
+6. Run the test and watch the test running in Simulator :) 
 
 ### Parallel Execution
 
