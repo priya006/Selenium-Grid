@@ -19,7 +19,7 @@
     "register": true,
     "registerCycle": 5000,
     "hubPort": 4444,
-    "hubHost": "10.226.15.96",
+    "hubHost": "127.0.0.1",
     "hubProtocol": "http"
 
   }
