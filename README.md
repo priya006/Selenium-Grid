@@ -72,6 +72,9 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
 5. Start  the Appium Sever with Emulator node attached. Example: `appium --chromedriver-executable  /Users/pboopathi/Downloads/chromedriver2 -p 4999 --nodeconfig  Android_Emultor_Node.json`
 6. RUn the test and watch the test running in Emulator :) 
 
+### How to configure Selenium grid with IOS Simulator as a Node using Appium
+![Selenium_Grid](https://github.com/priya006/Selenium-Grid/blob/master/Selenium_Grid_Server_Client.png)
+
 ### Parallel Execution
 
 ## Troubleshooting Tips
