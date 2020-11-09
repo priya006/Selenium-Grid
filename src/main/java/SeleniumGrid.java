@@ -9,32 +9,51 @@ import org.testng.annotations.*;
 public class SeleniumGrid {
 
     WebDriver driver;
-    String baseURL, hubURL;
+    String appURL, hubURL;
 
+    @Parameters({"portNO"})
     @BeforeTest
-    public void setUp() throws MalformedURLException {
+    public void setUp(String portNO ) throws MalformedURLException {
 
-        baseURL = "https://www.google.com/";
+        appURL = "https://www.google.com/";
         hubURL = "http://127.0.0.1:4444/wd/hub";
         DesiredCapabilities capability = new DesiredCapabilities();
 
-        //Node A
-        //Mac As Node
-//        capability.setPlatform(Platform.MAC);
-//        capability.setBrowserName("firefox");
+        if(portNO.equalsIgnoreCase("5566")) {
+            //Node A
+            //Mac As Node
+            System.out.println("Firefox Browser Test Environment created");
+            capability.setPlatform(Platform.MAC);
+            capability.setBrowserName("firefox");
+            //Start the driver
+            driver = new RemoteWebDriver(new URL(hubURL), capability);
+        }
+
+        else
+            if(portNO.equalsIgnoreCase("4725")) {
+                //Node B
+                //Android Real Device
+                System.out.println("Chrome Browser Test Environment created in Android Real Device");
+                capability.setPlatform(Platform.ANDROID);
+                capability.setBrowserName("chrome");
+                capability.setCapability("platformName", "Android");
+                //real Device Version
+                capability.setVersion("86.0.4240.185");
+                driver = new RemoteWebDriver(new URL(hubURL), capability);
+            }
 
 
-        //Node B
-        //Android Real Device
-        capability.setPlatform(Platform.ANDROID);
-        capability.setBrowserName("chrome");
-        capability.setCapability("platformName", "Android");
-        //real Device Version
-        capability.setVersion("86.0.4240.185");
-
-        //Node C
-        //Emulator version
-//        capability.setVersion("83.0.4103.106");
+            else
+                if(portNO.equalsIgnoreCase("4999")) {
+                    //Node C
+                    //Emulator version
+                    System.out.println("Chrome Browser Test Environment created in Android Emulator");
+                    capability.setPlatform(Platform.ANDROID);
+                    capability.setBrowserName("chrome");
+                    capability.setCapability("platformName", "Android");
+                    capability.setVersion("83.0.4103.106");
+                    driver = new RemoteWebDriver(new URL(hubURL), capability);
+                }
 
         //Node D
         //Real Device IOS Ipad16GB
@@ -58,8 +77,7 @@ public class SeleniumGrid {
         capability.setCapability("udid","971651FD-BFBC-41DF-B67A-C13BB11844D4");
         capability.setCapability("automationName" , "XCUITest");
 
-        //Start the driver
-        driver = new RemoteWebDriver(new URL(hubURL), capability);
+
     }
 
     @AfterTest

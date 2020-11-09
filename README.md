@@ -79,7 +79,7 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
 2.  Create a Configuration json file. Example: `IOS_Emulator_Node.json`
 3. Start the Simulator and Run the command `instruments -s devices` to make sure to see simulators attached to the laptop
 4. No need to Install SafariDriver if the Safari Browser version is 10 and above.
-5. Start  the Appium Sever with Simulator node attached. Example: `appium  -p 5777  --nodeconfig  IOS_Emulator_Node.json`
+5. Start  the Appium Sever with Simulator node attached. Example: `appium  -p 5777  --nodeconfig  IOS_Simulator_Node.json`
 6. Run the test and watch the test running in Simulator :) 
 
 ### Parallel Execution
