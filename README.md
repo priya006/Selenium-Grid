@@ -93,7 +93,7 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
 
 ## Tips
 1. How to find the version of browser. Type https://www.whatismybrowser.com/
-   This could be helpful to find the version of browser you are using from Ipad
+   This could be helpful to find the version of browser you are using from Ipad or any device
 2. Run the command `instruments -s devices` to get the list of IOS devices associated to your laptop
 3. IOS Real Device or Simulator turn on the  `Allow Remote Automation`option. Navigate to `settings > safari > advanced`
 4. Run the command `appium-doctor` and make sure you see green tick for all the checks. 
