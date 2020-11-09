@@ -24,8 +24,8 @@ so that node registers to the hub
 
 ### Installation
 1. `npm install -g appium` if you already have `npm` and `node js`
-   Install `npm install -g appium-doctor ` and run the command `appium-doctor`
-2. Run the command ` brew install carthage`   
+2.  Install `npm install -g appium-doctor ` and run the command `appium-doctor`
+3. Run the command ` brew install carthage`   
    
 ### How to configure Selenium grid with Android real Device as a Node using Appium
 1. Start the Selenium Stand alone server in a `Machine A`. This machine act as a hub. Command `java -jar selenium-server-standalone-3.141.59.jar -role hub`
