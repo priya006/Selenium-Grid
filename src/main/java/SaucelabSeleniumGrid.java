@@ -26,8 +26,7 @@ public class SaucelabSeleniumGrid {
       //  String methodName = name.getName();
 
         MutableCapabilities sauceOpts = new MutableCapabilities();
-        //sauceOpts.setCapability("name", methodName);
-//        sauceOpts.setCapability("build", "Java-W3C-Examples");
+        sauceOpts.setCapability("build", "Java-W3C-Examples");
         sauceOpts.setCapability("seleniumVersion", "3.141.59");
         sauceOpts.setCapability("username", "priya006");
         sauceOpts.setCapability("accessKey", "3f001225-4309-46e2-8447-381b56a2a03f");
@@ -40,8 +39,10 @@ public class SaucelabSeleniumGrid {
 
         if (browserName.equals("chrome")) {
             cap.setCapability("browserName", "chrome");
+            sauceOpts.setCapability("name", "ChromeTest");
         } else if (browserName.equals("firefox")) {
             cap.setCapability("browserName", "firefox");
+            sauceOpts.setCapability("name", "FireFoxTest");
         }
         // https://priya006:3f001225-4309-46e2-8447-381b56a2a03f@ondemand.us-west-1.saucelabs.com:443/wd/hub
         try {
