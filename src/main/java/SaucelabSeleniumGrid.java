@@ -6,7 +6,6 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.MutableCapabilities;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
@@ -21,13 +20,13 @@ public class SaucelabSeleniumGrid {
 
     @Parameters({"browser", "platform", "version"})
     @BeforeTest
-    public void setUp(String browserName, String platformName, String versionName,  Method name) {
+    public void setUp(String browserName, String platformName, String versionName) {
         appURL = "https://www.google.com/";
         System.out.println("browser name is : " + browserName);
-        String methodName = name.getName();
+      //  String methodName = name.getName();
 
         MutableCapabilities sauceOpts = new MutableCapabilities();
-        sauceOpts.setCapability("name", methodName);
+        //sauceOpts.setCapability("name", methodName);
 //        sauceOpts.setCapability("build", "Java-W3C-Examples");
         sauceOpts.setCapability("seleniumVersion", "3.141.59");
         sauceOpts.setCapability("username", "priya006");
@@ -56,7 +55,7 @@ public class SaucelabSeleniumGrid {
 
 
     @Test
-    public void sampleTest() {
+    public void TestGoogle() {
         driver.get(appURL);
         System.out.println("Site is launched");
 
