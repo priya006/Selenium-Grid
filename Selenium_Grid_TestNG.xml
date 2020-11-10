@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Test-Suite" parallel="tests" >
+    <test name="FireFoxTestInMac" >
+        <parameter name="portNO" value="5566" >
+        </parameter>
+        <classes>
+            <class name="SeleniumGrid" />
+        </classes>
+    </test>
+
+
+    <test name="ChomeInAndroidRealDevice" >
+        <parameter name="portNO" value="4725" >
+        </parameter>
+        <classes>
+            <class name="SeleniumGrid" />
+        </classes>
+    </test>
+
+
+    <test name="ChomeInAndroidEmulator" >
+        <parameter name="portNO" value="4999" >
+        </parameter>
+        <classes>
+            <class name="SeleniumGrid" />
+        </classes>
+    </test>
+
+
+    <test name="SafariInIOSSimulator" >
+        <parameter name="portNO" value="5777" >
+        </parameter>
+        <classes>
+            <class name="SeleniumGrid" />
+        </classes>
+    </test>
+
+</suite>
