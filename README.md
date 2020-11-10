@@ -3,6 +3,29 @@
 Selenium-Grid is used to run parallel executions in multiple machines at the same time.
 Run the Test in the Hub and the actual execution takes place in node machine
 
+# Table of Contents
+
+1. [Environment](https://github.com/priya006/Selenium-Grid#environment)
+2. [Architecture Diagram](https://github.com/priya006/Selenium-Grid#architecture-diagram)
+3. [Assumptions](https://github.com/priya006/Selenium-Grid#assumptions)
+4. [How to Run Selenium Grid Test in Mac Node using Firefox browser](https://github.com/priya006/Selenium-Grid#how-to-run-selenium-grid-test-in-mac-node-using-firefox-browser)
+5. [Installation](https://github.com/priya006/Selenium-Grid#installation)
+6. [How to configure Selenium grid with Android real Device as a Node using Appium
+](https://github.com/priya006/Selenium-Grid#how-to-configure-selenium-grid-with-android-real-device-as-a-node-using-appium)
+7. [How to configure Selenium grid with Android Emulator as a Node using Appium
+](https://github.com/priya006/Selenium-Grid#how-to-configure-selenium-grid-with-android-emulator-as-a-node-using-appium)
+8. [How to configure Selenium grid with IOS Simulator as a Node using Appium
+](https://github.com/priya006/Selenium-Grid#how-to-configure-selenium-grid-with-ios-simulator-as-a-node-using-appium)
+9. [Parallel Execution
+](https://github.com/priya006/Selenium-Grid#parallel-execution)
+10. [Troubleshooting Tips
+](https://github.com/priya006/Selenium-Grid#troubleshooting-tips)
+11. [Tips](https://github.com/priya006/Selenium-Grid#tips)
+12. [References
+](https://github.com/priya006/Selenium-Grid#references)
+
+
+
 ## Environment 
 
 ### Architecture Diagram
