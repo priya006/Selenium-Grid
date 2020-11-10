@@ -122,6 +122,8 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
 ![Parallel_Execution](https://github.com/priya006/Selenium-Grid/blob/master/ParallelExecution_Grid_TestNG.png)
 2. TestNG xml helps doing Parallel Execution. `Selenium_Grid_TestNG.xml` is executed
 
+### Selenium Tests on SauceLabs
+
 ## Troubleshooting Tips
 1. If there is issue while registering the node to the hub. Start the Selinium server/hub and navigate to http://localhost:4444/wd/hub from teh browser to see the full stack trace
 2. It is important to set JAVA_HOME. [Guide to set Java home](https://medium.com/@spmadhi/easy-steps-to-install-and-set-java-home-in-mac-machine-c84b7bbc94e6)
