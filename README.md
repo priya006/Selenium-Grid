@@ -84,7 +84,7 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
 
 ### Parallel Execution
 1. Selenium Stand alone server acting as hub is started. In the same machine/laptop nodes are also started and registered with the hub.
-[Parallel_Execution]()
+[Parallel_Execution](https://github.com/priya006/Selenium-Grid/blob/master/ParallelExecution_Grid_TestNG.png)
 2. TestNG xml helps doing Parallel Execution. `Selenium_Grid_TestNG.xml` is executed
 
 ## Troubleshooting Tips
