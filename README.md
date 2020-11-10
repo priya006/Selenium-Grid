@@ -28,6 +28,18 @@ Run the Test in the Hub and the actual execution takes place in node machine
 
 ## Environment 
 
+1. Appium Version : 1.18.3
+2. Node.js : v10.16.0
+3. selenium-server-standalone: 3.141.59
+4. ChromeDriver: 83.0.4103 and 86.0.4240
+5. npm: 6.9.0
+6. Java SDK: 1.8.0_251
+7. GeckoDriver: 0.27.0-macos
+8. Android Emulator: API_27_Android_8.1_15GB
+9. Android Real Device: OnePlus6T_AndroidVersion_10
+10. IOS Simulator: iphone11_IOS_13.6
+11. Safari: 13.1[SafariDriver Not Needed to download]
+
 ### Architecture Diagram
 ![Selenium_Grid](https://github.com/priya006/Selenium-Grid/blob/master/Selenium_Grid.png)
 
