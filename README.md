@@ -83,6 +83,9 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
 6. Run the test and watch the test running in Simulator :) 
 
 ### Parallel Execution
+1. Selenium Stand alone server acting as hub is started. In the same machine/laptop nodes are also started and registered with the hub.
+[Parallel_Execution]()
+2. TestNG xml helps doing Parallel Execution. `Selenium_Grid_TestNG.xml` is executed
 
 ## Troubleshooting Tips
 1. If there is issue while registering the node to the hub. Start the Selinium server/hub and navigate to http://localhost:4444/wd/hub from teh browser to see the full stack trace
@@ -96,7 +99,8 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
    This could be helpful to find the version of browser you are using from Ipad or any device
 2. Run the command `instruments -s devices` to get the list of IOS devices associated to your laptop
 3. IOS Real Device or Simulator turn on the  `Allow Remote Automation`option. Navigate to `settings > safari > advanced`
-4. Run the command `appium-doctor` and make sure you see green tick for all the checks. 
+4. Run the command `appium-doctor` and make sure you see green tick for all the checks.
+4. Enable Developer  Options in Android Emulator before trying ti run the tests. Settings > System > About emulated device > Click the `Build Number 7 times`.   
  
 
 **References**

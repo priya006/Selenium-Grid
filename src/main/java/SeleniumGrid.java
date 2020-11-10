@@ -39,6 +39,7 @@ public class SeleniumGrid {
                 capability.setCapability("platformName", "Android");
                 //real Device Version
                 capability.setVersion("86.0.4240.185");
+                capability.setCapability("automationName", "UiAutomator2");
                 driver = new RemoteWebDriver(new URL(hubURL), capability);
             }
 
@@ -52,6 +53,7 @@ public class SeleniumGrid {
                     capability.setBrowserName("chrome");
                     capability.setCapability("platformName", "Android");
                     capability.setVersion("83.0.4103.106");
+                    capability.setCapability("automationName", "UiAutomator2");
                     driver = new RemoteWebDriver(new URL(hubURL), capability);
                 }
 
