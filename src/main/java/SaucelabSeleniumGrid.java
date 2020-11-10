@@ -9,19 +9,20 @@ import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
+import org.testng.Assert;
+import org.testng.annotations.*;
 
 
 public class SaucelabSeleniumGrid {
 
     WebDriver driver;
+    String appURL;
+
 
     @Parameters({"browser", "platform", "version"})
-    @BeforeMethod
+    @BeforeTest
     public void setUp(String browserName, String platformName, String versionName,  Method name) {
-
+        appURL = "https://www.google.com/";
         System.out.println("browser name is : " + browserName);
         String methodName = name.getName();
 
@@ -53,7 +54,21 @@ public class SaucelabSeleniumGrid {
 
     }
 
-    @AfterMethod(alwaysRun = true)
+
+    @Test
+    public void sampleTest() {
+        driver.get(appURL);
+        System.out.println("Site is launched");
+
+        if (driver.getPageSource().contains("Google Search")) {
+            Assert.assertTrue(true, "Google Search Found");
+        } else {
+            Assert.assertTrue(false, "Failed: Google Search NOT found");
+        }
+
+    }
+
+    @AfterTest(alwaysRun = true)
     public void tearDown() {
         driver.quit();
     }
