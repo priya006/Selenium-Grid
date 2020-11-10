@@ -124,7 +124,7 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
 2. TestNG xml helps doing Parallel Execution. `Selenium_Grid_TestNG.xml` is executed
 
 ### Selenium Tests on SauceLabs
-1. Create an account in [SauceLabs](https://saucelabs.com/sign-up)
+1. Create an account in [SauceLabs](https://saucelabs.com/sign-up) and login to follow below steps
 2. Navigate to [UserSettings](https://app.saucelabs.com/user-settings) and get the `UserName` and `AccessKey`
 3. Choose the `API`, `Device`, `Operating System`, `Browser` from [Platform Configurator](https://wiki.saucelabs.com/display/DOCS/Platform+Configurator#/). Get the code from Code generator from here
 4. Execute the test class `SaucelabSeleniumGrid` via TestNG `Sauce_labs_Selenium_Grid.xml`
