@@ -18,10 +18,11 @@ Run the Test in the Hub and the actual execution takes place in node machine
 ](https://github.com/priya006/Selenium-Grid#how-to-configure-selenium-grid-with-ios-simulator-as-a-node-using-appium)
 9. [Parallel Execution
 ](https://github.com/priya006/Selenium-Grid#parallel-execution)
-10. [Troubleshooting Tips
+10. [Selenium Tests on SauceLabs](https://github.com/priya006/Selenium-Grid#selenium-tests-on-saucelabs)
+11. [Troubleshooting Tips
 ](https://github.com/priya006/Selenium-Grid#troubleshooting-tips)
-11. [Tips](https://github.com/priya006/Selenium-Grid#tips)
-12. [References
+12. [Tips](https://github.com/priya006/Selenium-Grid#tips)
+13. [References
 ](https://github.com/priya006/Selenium-Grid#references)
 
 
