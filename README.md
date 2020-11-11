@@ -138,7 +138,7 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
 3. Configure [Capabilities](https://www.browserstack.com/automate/capabilities?tag=selenium-4)
 4. Execute the class `BrowserStackSeleniumGrid` via TestNG `BrowserStack_Selenium_grid_TestNG.xml`
 5. Test Results could be monitored in BrowserStack Dashboard
-![TestResults]() 
+![TestResults](https://github.com/priya006/Selenium-Grid/blob/master/BrowserStack.png) 
 
 ## Troubleshooting Tips
 1. If there is issue while registering the node to the hub. Start the Selinium server/hub and navigate to http://localhost:4444/wd/hub from teh browser to see the full stack trace
