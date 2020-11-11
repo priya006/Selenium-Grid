@@ -11,7 +11,7 @@
         <parameter name="platform" value="windows 10" />
 
         <classes>
-            <class name="SaucelabSeleniumGrid" />
+            <class name="BrowserStackSeleniumGrid" />
         </classes>
 
     </test>
@@ -22,7 +22,7 @@
         <parameter name="platform" value="macOS 10.15" />
 
         <classes>
-            <class name="SaucelabSeleniumGrid" />
+            <class name="BrowserStackSeleniumGrid" />
         </classes>
 
     </test>

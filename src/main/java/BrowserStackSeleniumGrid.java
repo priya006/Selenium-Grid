@@ -20,19 +20,22 @@ public class BrowserStackSeleniumGrid {
 
     WebDriver driver;
     String appURL;
-
-    @Parameters({"browser", "platform", "browser_version"})
+    String URL;
+    @Parameters({"browser", "platform", "version"})
     @BeforeTest
-    public void Setup(String browserName, String platformName, String versionName ){
+    public void Setup(String browserName, String platformName, String version ){
         appURL = "https://www.google.com/";
         System.out.println("browser name is : " + browserName);
+          final String USERNAME = "puthiyaulagam1";
+          final String AUTOMATE_KEY = "3CLwDDzsAkstEoA3sTuA";
+          final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
         DesiredCapabilities caps = new DesiredCapabilities();
 
         // Set your access credentials
         caps.setCapability("browserstack.user", "puthiyaulagam1");
         caps.setCapability("browserstack.key", "3CLwDDzsAkstEoA3sTuA");
 
-        caps.setCapability("browserVersion", versionName);
+        caps.setCapability("browserVersion", version);
         caps.setCapability("platformName", platformName);
 
         // Set URL of the application under test
@@ -57,7 +60,7 @@ public class BrowserStackSeleniumGrid {
         // and desired capabilities defined above
 
         try {
-            driver = new RemoteWebDriver(new URL("https://hub-cloud.browserstack.com/wd/hub"), caps);
+            driver = new RemoteWebDriver(new URL(URL), caps);
             driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         } catch (MalformedURLException e) {
             e.printStackTrace();
