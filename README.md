@@ -19,10 +19,12 @@ Run the Test in the Hub and the actual execution takes place in node machine
 9. [Parallel Execution
 ](https://github.com/priya006/Selenium-Grid#parallel-execution)
 10. [Selenium Tests on SauceLabs](https://github.com/priya006/Selenium-Grid#selenium-tests-on-saucelabs)
-11. [Troubleshooting Tips
+11. [Selenium Test on BrowserStack
+](https://github.com/priya006/Selenium-Grid#selenium-test-on-browserstack)
+12. [Troubleshooting Tips
 ](https://github.com/priya006/Selenium-Grid#troubleshooting-tips)
-12. [Tips](https://github.com/priya006/Selenium-Grid#tips)
-13. [References
+13. [Tips](https://github.com/priya006/Selenium-Grid#tips)
+14. [References
 ](https://github.com/priya006/Selenium-Grid#references)
 
 
