@@ -2,10 +2,7 @@ import java.net.URL;
 
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 
 import java.util.concurrent.TimeUnit;
@@ -21,9 +18,9 @@ public class BrowserStackSeleniumGrid {
     WebDriver driver;
     String appURL;
     String URL;
-    @Parameters({"browser", "os", "browserversion", "os_version","deviceName"})
+    @Parameters({"browser", "os", "browserversion", "os_version"})
     @BeforeTest
-    public void Setup(String browser, String os, String browserversion, String os_version, String deviceName){
+    public void Setup(String browser, String os, String browserversion, String os_version){
         appURL = "https://www.google.com/";
         System.out.println("browser name is : " + browser);
 
@@ -54,10 +51,19 @@ public class BrowserStackSeleniumGrid {
             caps.setCapability("name", "FireFoxTest_Windows");
         }else if(os.equals("iOS")  )
         {
-            caps.setCapability("browser", "chrome");
+            caps.setCapability("browser", "safari");
             caps.setCapability("os", os);
             caps.setCapability("name", "ChromeTest_IOS_RealDevice");
-            caps.setCapability("deviceName", deviceName);
+            caps.setCapability("deviceName", "iPad Pro 12.9 2020");
+            caps.setCapability("realMobile", "true");
+        }
+
+        else if(os.equals("Android")  )
+        {
+            caps.setCapability("browser", "chrome");
+            caps.setCapability("os", os);
+            caps.setCapability("name", "ChromeTest_Android_RealDevice");
+            caps.setCapability("deviceName", "Google Pixel 3 XL");
             caps.setCapability("realMobile", "true");
         }
 

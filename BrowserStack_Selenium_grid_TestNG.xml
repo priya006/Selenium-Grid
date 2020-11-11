@@ -5,7 +5,7 @@
        thread-count="3" parallel="tests" verbose="3">
 
 
-    <test name="Sauce Test - FireFox">
+    <test name="BrowserStack Test - FireFox">
         <parameter name="browser" value="firefox" />
         <parameter name="browserversion" value="79.0" />
         <parameter name="os" value="Windows" />
@@ -17,7 +17,7 @@
 
     </test>
 
-    <test name="Sauce Test - Chrome">
+    <test name="BrowserStack Test - Chrome">
         <parameter name="browser" value="chrome" />
         <parameter name="browserversion" value="85.0" />
         <parameter name="os" value="OS X" />
@@ -29,17 +29,29 @@
 
     </test>
 
-    <test name="Sauce Test - Iphone">
-        <parameter name="browser" value="chrome" />
-        <parameter name="browserversion" value="86.0" />
+    <test name="BrowserStack Test - Iphone">
+        <parameter name="browser" value="safari" />
+        <parameter name="browserversion" value="13" />
         <parameter name="os" value="iOS" />
         <parameter name="os_version" value="">14</parameter>
-        <parameter name="deviceName" value="">iPad Pro 12.9 2020</parameter>
 
         <classes>
             <class name="BrowserStackSeleniumGrid" />
         </classes>
 
     </test>
+
+
+<!--    <test name="BrowserStack Test - Android">-->
+<!--        <parameter name="browser" value="chrome" />-->
+<!--        <parameter name="browserversion" value="85.0" />-->
+<!--        <parameter name="os" value="Android" />-->
+<!--        <parameter name="os_version" value="">9.0</parameter>-->
+
+<!--        <classes>-->
+<!--            <class name="BrowserStackSeleniumGrid" />-->
+<!--        </classes>-->
+
+<!--    </test>-->
 
 </suite>
