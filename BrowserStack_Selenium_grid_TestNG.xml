@@ -6,10 +6,10 @@
 
 
     <test name="Sauce Test - FF">
-        <parameter name="browserName" value="firefox" />
+        <parameter name="browser" value="firefox" />
         <parameter name="browserversion" value="79.0" />
-        <parameter name="platform" value="windows" />
-        <parameter name="os_version" value="">10</parameter>
+        <parameter name="os" value="Windows" />
+        <parameter name="os_version" value="">7</parameter>
 
         <classes>
             <class name="BrowserStackSeleniumGrid" />
@@ -18,9 +18,9 @@
     </test>
 
     <test name="Sauce Test - Chrome">
-        <parameter name="browserName" value="chrome" />
+        <parameter name="browser" value="chrome" />
         <parameter name="browserversion" value="85.0" />
-        <parameter name="platform" value="macOS" />
+        <parameter name="os" value="OS X" />
         <parameter name="os_version" value="">10.15</parameter>
 
         <classes>

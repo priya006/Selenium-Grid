@@ -21,38 +21,37 @@ public class BrowserStackSeleniumGrid {
     WebDriver driver;
     String appURL;
     String URL;
-    @Parameters({"browserName", "platform", "browserversion", "os_version"})
+    @Parameters({"browser", "os", "browserversion", "os_version"})
     @BeforeTest
-    public void Setup(String browserName, String platformName, String browserversion, String os_version ){
+    public void Setup(String browser, String os, String browserversion, String os_version ){
         appURL = "https://www.google.com/";
-        System.out.println("browser name is : " + browserName);
+        System.out.println("browser name is : " + browser);
+
+        // Set your access credentials
+//        caps.setCapability("browserstack.user", "puthiyaulagam1");
+  //        caps.setCapability("browserstack.key", "3CLwDDzsAkstEoA3sTuA");
           final String USERNAME = "puthiyaulagam1";
           final String AUTOMATE_KEY = "3CLwDDzsAkstEoA3sTuA";
           final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
         DesiredCapabilities caps = new DesiredCapabilities();
 
-        // Set your access credentials
-        caps.setCapability("browserstack.user", "puthiyaulagam1");
-        caps.setCapability("browserstack.key", "3CLwDDzsAkstEoA3sTuA");
 
-        caps.setCapability("browserVersion", browserversion);
-        caps.setCapability("os", platformName);
+
+        caps.setCapability("browser_version", browserversion);
         caps.setCapability("os_version",os_version);
 
-
-        // Specify device and os_version for testing
-         caps.setCapability("device", "Samsung Galaxy S10e");
-//        caps.setCapability("os_version", "9.0");
-
         // Set other BrowserStack capabilities
-        caps.setCapability("project", "First Java Project");
-        caps.setCapability("build", "Java Android");
-        caps.setCapability("name", "first_test");
+        caps.setCapability("project", "Cross Browser Testing");
+        caps.setCapability("build", "Selenium Grid Using BrowserStack");
 
-        if (browserName.equals("chrome")) {
-            caps.setCapability("browserName", "chrome");
-        } else if (browserName.equals("firefox")) {
-            caps.setCapability("browserName", "firefox");
+        if (browser.equals("chrome")) {
+            caps.setCapability("browser", "chrome");
+            caps.setCapability("os", os);
+            caps.setCapability("name", "ChromeTest_Mac");
+        } else if (browser.equals("firefox")) {
+            caps.setCapability("browser", "firefox");
+            caps.setCapability("os", os);
+            caps.setCapability("name", "FireFoxTest_Windows");
         }
 
         // Initialise the remote Webdriver using BrowserStack remote URL
