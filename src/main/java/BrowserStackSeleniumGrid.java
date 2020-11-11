@@ -1,53 +1,88 @@
 import java.net.URL;
-import s.util.List;
-import java.util.function.Function;
+
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+
+import java.util.concurrent.TimeUnit;
+
 import java.net.MalformedURLException;
 
-import io.appium.java_client.MobileBy;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
-
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 
 public class BrowserStackSeleniumGrid {
 
-    public static void main(String[] args) throws MalformedURLException, InterruptedException {
+    WebDriver driver;
+    String appURL;
 
+    @Parameters({"browser", "platform", "version"})
+    @BeforeTest
+    public void Setup(String browserName, String platformName, String versionName ){
+        appURL = "https://www.google.com/";
+        System.out.println("browser name is : " + browserName);
         DesiredCapabilities caps = new DesiredCapabilities();
 
         // Set your access credentials
         caps.setCapability("browserstack.user", "puthiyaulagam1");
         caps.setCapability("browserstack.key", "3CLwDDzsAkstEoA3sTuA");
 
+        caps.setCapability("browserVersion", versionName);
+        caps.setCapability("platformName", platformName);
+
         // Set URL of the application under test
-        caps.setCapability("app", "bs://<app-id>");
+        caps.setCapability("app", appURL);
 
         // Specify device and os_version for testing
-        caps.setCapability("device", "Google Pixel 3");
-        caps.setCapability("os_version", "9.0");
+         caps.setCapability("device", "Samsung Galaxy S10e");
+//        caps.setCapability("os_version", "9.0");
 
         // Set other BrowserStack capabilities
         caps.setCapability("project", "First Java Project");
         caps.setCapability("build", "Java Android");
         caps.setCapability("name", "first_test");
 
+        if (browserName.equals("chrome")) {
+            caps.setCapability("browserName", "chrome");
+        } else if (browserName.equals("firefox")) {
+            caps.setCapability("browserName", "firefox");
+        }
 
         // Initialise the remote Webdriver using BrowserStack remote URL
         // and desired capabilities defined above
-        AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(
-                new URL("http://hub.browserstack.com/wd/hub"), caps);
+
+        try {
+            driver = new RemoteWebDriver(new URL("http://hub.browserstack.com/wd/hu"), caps);
+            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
 
 
-        /* Write your Custom code here */
-
-
-        // Invoke driver.quit() after the test is done to indicate that the test is completed.
-        driver.quit();
 
     }
+
+    @Test
+    public void TestGoogle() {
+        driver.get(appURL);
+        System.out.println("Site is launched");
+
+        if (driver.getPageSource().contains("Google Search")) {
+            Assert.assertTrue(true, "Google Search Found");
+        } else {
+            Assert.assertTrue(false, "Failed: Google Search NOT found");
+        }
+
+    }
+    @AfterTest(alwaysRun = true)
+    public void tearDown() {
+        driver.quit();
+    }
+
 
 }
