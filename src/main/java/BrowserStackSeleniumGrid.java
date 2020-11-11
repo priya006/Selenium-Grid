@@ -21,7 +21,7 @@ public class BrowserStackSeleniumGrid {
     WebDriver driver;
     String appURL;
     String URL;
-    @Parameters({"browserName", "platform", "browserversion,os_version"})
+    @Parameters({"browserName", "platform", "browserversion", "os_version"})
     @BeforeTest
     public void Setup(String browserName, String platformName, String browserversion, String os_version ){
         appURL = "https://www.google.com/";
