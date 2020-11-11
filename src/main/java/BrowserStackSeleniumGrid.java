@@ -21,9 +21,9 @@ public class BrowserStackSeleniumGrid {
     WebDriver driver;
     String appURL;
     String URL;
-    @Parameters({"browser", "os", "browserversion", "os_version"})
+    @Parameters({"browser", "os", "browserversion", "os_version","deviceName"})
     @BeforeTest
-    public void Setup(String browser, String os, String browserversion, String os_version ){
+    public void Setup(String browser, String os, String browserversion, String os_version, String deviceName){
         appURL = "https://www.google.com/";
         System.out.println("browser name is : " + browser);
 
@@ -52,6 +52,13 @@ public class BrowserStackSeleniumGrid {
             caps.setCapability("browser", "firefox");
             caps.setCapability("os", os);
             caps.setCapability("name", "FireFoxTest_Windows");
+        }else if(os.equals("iOS")  )
+        {
+            caps.setCapability("browser", "chrome");
+            caps.setCapability("os", os);
+            caps.setCapability("name", "ChromeTest_IOS_RealDevice");
+            caps.setCapability("deviceName", deviceName);
+            caps.setCapability("realMobile", "true");
         }
 
         // Initialise the remote Webdriver using BrowserStack remote URL
