@@ -21,9 +21,9 @@ public class BrowserStackSeleniumGrid {
     WebDriver driver;
     String appURL;
     String URL;
-    @Parameters({"browser", "platform", "version"})
+    @Parameters({"browserName", "platform", "browserversion,os_version"})
     @BeforeTest
-    public void Setup(String browserName, String platformName, String version ){
+    public void Setup(String browserName, String platformName, String browserversion, String os_version ){
         appURL = "https://www.google.com/";
         System.out.println("browser name is : " + browserName);
           final String USERNAME = "puthiyaulagam1";
@@ -35,11 +35,10 @@ public class BrowserStackSeleniumGrid {
         caps.setCapability("browserstack.user", "puthiyaulagam1");
         caps.setCapability("browserstack.key", "3CLwDDzsAkstEoA3sTuA");
 
-        caps.setCapability("browserVersion", version);
-        caps.setCapability("platformName", platformName);
+        caps.setCapability("browserVersion", browserversion);
+        caps.setCapability("os", platformName);
+        caps.setCapability("os_version",os_version);
 
-        // Set URL of the application under test
-        caps.setCapability("app", appURL);
 
         // Specify device and os_version for testing
          caps.setCapability("device", "Samsung Galaxy S10e");
