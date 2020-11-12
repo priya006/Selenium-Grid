@@ -21,7 +21,7 @@ Run the Test in the Hub and the actual execution takes place in node machine
 10. [Selenium Tests on SauceLabs](https://github.com/priya006/Selenium-Grid#selenium-tests-on-saucelabs)
 11. [Selenium Test on BrowserStack
 ](https://github.com/priya006/Selenium-Grid#selenium-test-on-browserstack)
-12.[Selenium Test in AWS ec2 Instance and the Selenium hub and Nodes are created as Docker containers]()
+12.[Selenium Test in AWS ec2 Instance and the Selenium hub and Nodes are created as Docker containers](https://github.com/priya006/Selenium-Grid#selenium-test-in-aws-ec2-instance-and-the-selenium-hub-and-nodes-are-created-as-docker-containers)
 13. [Troubleshooting Tips
 ](https://github.com/priya006/Selenium-Grid#troubleshooting-tips)
 14. [Tips](https://github.com/priya006/Selenium-Grid#tips)
@@ -141,7 +141,31 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
 5. Test Results could be monitored in BrowserStack Dashboard
 ![TestResults](https://github.com/priya006/Selenium-Grid/blob/master/BrowserStack.png)
 
-## Selenium Test in AWS ec2 Instance and the Selenium hub and Nodes are created as Docker containers 
+## Selenium Test in AWS ec2 Instance and the Selenium hub and Nodes are created as Docker containers
+ 
+**Pre-req:** Sign up in AWS with an Account. And login as root user.
+1. LaunchInstance > Community AMI's > Pick Amazon Linux machine with docker and docker-compose > Select t2.medium (Should [ay for this instance]) > Click Configure Intsnace Details > MAke no change in configure instance details > Click Add storage Button > Click Add Tags > Click Configure Security Group > Change type as "ssh" Source as "Anywhere" > Add Rule and type as Custom TCP  port as "4444" > Launch your instance > Select a New Key pair > Give it a key value > Click Download Key pair > Click Launch instance
+2. Copy the public IP Address: 35.165.129.54
+3. Change the access permissions for the downloaded `pem`file. Example: `chmod 400 Seleniu_Grid_new.pem`
+4. ssh -i Seleniu_Grid_new.pem ec2-user@<Public IPv4 address> Example: ec2-user@35.165.129.54
+5. Execute the command `sudo yum update`
+6. Remove old `1.7`version of Java and install 1.8. Execute the command `sudo  yum remove  java -y`
+7. Install java 1.8 by running the command `sudo yum install java-1.8.0-openjdk -y`
+8. Check the versions of docker and docker-compose. `docker -v` `docker-compose -v`
+9. Create a file in ec2 instance withe the name docker-compose.yml. The container images will go into this file and it has the logic how the nodes connects to selenium_hub
+10. Copy the content from https://github.com/SeleniumHQ/docker-selenium/blob/trunk/docker-compose-v3.yml and save the file as `docker-compose.yml`
+11. To create the Selenium hub and Nodes. Run the command `docker-compose up -d`. This command downloads all images
+12. To  check the docker containers started execute the command `docker ps -a`
+![DockerContainer](https://github.com/priya006/Selenium-Grid/blob/master/Docker_Container.png)
+13. To view grid console <https://publicipaddress:4444/grid/console> T View the running nodes and it's status from browser navigate to http://publicipaddress:4444/ui/index.html#/
+14. Scale a container like so `docker-compose scale chrome=5`
+15. execute  the class `SeleniumTestInAWSDocker` through `AWS_Docker_Selenium_Grid.xml` testNG file
+
+How to Kill the ec2 instance created:
+-----------------------------------
+1. docker-compose down to  tear down all the running docker containers
+2. To tear down the ec2 machine. Go to AWS UI > Instances > Select the instance > Terminate instance
+![Terminateec2](https://github.com/priya006/Selenium-Grid/blob/master/Terminate_ec2_Instance.png)
 
 ## Troubleshooting Tips
 1. If there is issue while registering the node to the hub. Start the Selinium server/hub and navigate to http://localhost:4444/wd/hub from teh browser to see the full stack trace
