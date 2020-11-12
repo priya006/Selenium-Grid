@@ -145,6 +145,7 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
  
 **Pre-req:** Sign up in AWS with an Account. And login as root user.
 1. LaunchInstance > Community AMI's > Pick Amazon Linux machine with docker and docker-compose > Select t2.medium (Should [ay for this instance]) > Click Configure Intsnace Details > MAke no change in configure instance details > Click Add storage Button > Click Add Tags > Click Configure Security Group > Change type as "ssh" Source as "Anywhere" > Add Rule and type as Custom TCP  port as "4444" > Launch your instance > Select a New Key pair > Give it a key value > Click Download Key pair > Click Launch instance
+![AWSUI](https://github.com/priya006/Selenium-Grid/blob/master/AWS_UI.png)
 2. Copy the public IP Address. Example: 35.165.129.54
 3. Change the access permissions for the downloaded `pem`file. Example: `chmod 400 Seleniu_Grid_new.pem`
 4. ssh to the Amazon ec2 instance. `ssh -i Seleniu_Grid_new.pem ec2-user@<Public IPv4 address>` Example: ec2-user@35.165.129.54
