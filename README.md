@@ -21,7 +21,7 @@ Run the Test in the Hub and the actual execution takes place in node machine
 10. [Selenium Tests on SauceLabs](https://github.com/priya006/Selenium-Grid#selenium-tests-on-saucelabs)
 11. [Selenium Test on BrowserStack
     ](https://github.com/priya006/Selenium-Grid#selenium-test-on-browserstack)
-12. [Selenium Test in AWS ec2 Instance and the Selenium hub and Nodes are created as Docker containers](https://github.com/priya006/Selenium-Grid#selenium-test-in-aws-ec2-instance-and-the-selenium-hub-and-nodes-are-created-as-docker-containers)
+12. [Selenium Test executed in AWS ec2 Instance. Selenium hub and Nodes are created as Docker containers](https://github.com/priya006/Selenium-Grid#selenium-test-in-aws-ec2-instance-and-the-selenium-hub-and-nodes-are-created-as-docker-containers)
 13. [Troubleshooting Tips
 ](https://github.com/priya006/Selenium-Grid#troubleshooting-tips)
 14. [Tips](https://github.com/priya006/Selenium-Grid#tips)
