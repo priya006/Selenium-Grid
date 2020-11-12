@@ -23,7 +23,7 @@ public class SeleniumTestInAWSDocker {
 
 
 
-    public class FreshWorksTest {
+
         WebDriver driver;
 
         @BeforeMethod
@@ -35,7 +35,7 @@ public class SeleniumTestInAWSDocker {
                  cap.setCapability("browserName", "chrome");
                  try {
                  driver = new RemoteWebDriver(new
-                         URL("http://13.233.116.37:4444/wd/hub"), cap);
+                         URL("http://35.165.129.54:4444/wd/hub"), cap);
                  } catch (MalformedURLException e) {
                  e.printStackTrace();
                  }
@@ -47,7 +47,9 @@ public class SeleniumTestInAWSDocker {
                  cap.setCapability("browserName", "firefox");
                  try {
                  driver = new RemoteWebDriver(new
-                 URL("http://13.233.116.37:4444/wd/hub"), cap);
+
+                 //ec2 instance url. where the Selenium hub and Nodes are deployed as Docker container
+                 URL("http://35.165.129.54:4444/wd/hub"), cap);
                  } catch (MalformedURLException e) {
                  e.printStackTrace();
                  }
@@ -83,6 +85,6 @@ public class SeleniumTestInAWSDocker {
             driver.quit();
         }
 
-    }
+
 
 }
