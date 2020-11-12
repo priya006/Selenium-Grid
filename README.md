@@ -21,10 +21,11 @@ Run the Test in the Hub and the actual execution takes place in node machine
 10. [Selenium Tests on SauceLabs](https://github.com/priya006/Selenium-Grid#selenium-tests-on-saucelabs)
 11. [Selenium Test on BrowserStack
 ](https://github.com/priya006/Selenium-Grid#selenium-test-on-browserstack)
-12. [Troubleshooting Tips
+12.[Selenium Test in AWS ec2 Instance and the Selenium hub and Nodes are created as Docker containers]()
+13. [Troubleshooting Tips
 ](https://github.com/priya006/Selenium-Grid#troubleshooting-tips)
-13. [Tips](https://github.com/priya006/Selenium-Grid#tips)
-14. [References
+14. [Tips](https://github.com/priya006/Selenium-Grid#tips)
+15. [References
 ](https://github.com/priya006/Selenium-Grid#references)
 
 
@@ -138,7 +139,9 @@ The Json file `Real_Device_Android_Node.json` has **localhost** for hub host key
 3. Configure [Capabilities](https://www.browserstack.com/automate/capabilities?tag=selenium-4)
 4. Execute the class `BrowserStackSeleniumGrid` via TestNG `BrowserStack_Selenium_grid_TestNG.xml`
 5. Test Results could be monitored in BrowserStack Dashboard
-![TestResults](https://github.com/priya006/Selenium-Grid/blob/master/BrowserStack.png) 
+![TestResults](https://github.com/priya006/Selenium-Grid/blob/master/BrowserStack.png)
+
+## Selenium Test in AWS ec2 Instance and the Selenium hub and Nodes are created as Docker containers 
 
 ## Troubleshooting Tips
 1. If there is issue while registering the node to the hub. Start the Selinium server/hub and navigate to http://localhost:4444/wd/hub from teh browser to see the full stack trace
