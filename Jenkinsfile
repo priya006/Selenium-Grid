@@ -3,7 +3,7 @@ node {
 		git "https://github.com/priya006/Selenium-Grid.git"
 		}
 	stage ('Build'){
-    	dir("java") {
+    	dir("Selenium_Grid") {
 	   sh "mvn clean install"
        }
        	dir("Selenium_Grid/target") {
