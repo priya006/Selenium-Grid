@@ -1,6 +1,6 @@
 node {
 	stage ('SCM checkout'){
-		git "https://github.com/priya006/Selenium-Grid.git"
+		git "https://github.com/priya006/Selenium-Grid"
 		}
 	stage ('Build'){
     	dir("Selenium_Grid") {
