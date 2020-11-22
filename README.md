@@ -182,6 +182,7 @@ How to Kill the ec2 instance created:
 3. IOS Real Device or Simulator turn on the  `Allow Remote Automation`option. Navigate to `settings > safari > advanced`
 4. Run the command `appium-doctor` and make sure you see green tick for all the checks.
 4. Enable Developer  Options in Android Emulator before trying ti run the tests. Settings > System > About emulated device > Click the `Build Number 7 times`.   
+5. [vysor](https://chrome.google.com/webstore/detail/vysor/gidgenkbbabolejbgbpnhbimgjbffefm?hl=en-US) extension could be handy when running selenium tests in mobile. As the extension let's to view Android phone in Computer.
  
 
 **References**
